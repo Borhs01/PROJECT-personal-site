@@ -1,0 +1,93 @@
+.section__header{
+    display: flex;
+    align-content: space-between;
+    padding: 2rem;
+    height: 8.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent; // Optional: ensures background covers content behind
+}
+.header{
+
+    &__logo{
+        flex: 35%;
+        display: flex;
+        align-items: center;
+        &--img{
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+        }
+        &--text{
+            margin-left: 1rem;
+        }
+        &--text1{
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 800;
+
+        }
+        &--text2{
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-grey-dark-2);
+        }
+    }
+    &__navigation{
+        flex: 1;
+        backdrop-filter: blur(20px);
+        background-color: rgba(245, 245, 245, 0.7);
+        border-radius: 10px;
+        opacity: 1;
+        padding: .2rem 1rem;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__nav__list{
+        list-style: none;
+        
+    }
+    &__nav__item{
+        display: inline-block;
+        
+    }
+    &__nav__link{
+        display: flex;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: var(--color-grey-light-2);
+
+        &:hover{
+            color: var(--color-black);
+        }
+    }
+
+    &__nav__item:not(:last-child) {
+        margin-right: 3rem;
+    }
+    &__btn{
+        margin: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__link{
+            text-decoration: none;
+            font-size: 1.6rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: var(--color-grey-light-2);
+            padding: 1.2rem 2.5rem;
+            border-radius: 5rem;
+
+            &:hover{
+                color: rgba(var(--color-black), 0.6);
+                background-color: var(--color-grey-light-2);
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "beauty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+     "beauty:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
