@@ -1,11 +1,24 @@
 {
   "name": "beauty",
   "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Borhs01/PROJECT-personal-site#readme",
+  "bugs": {
+    "url": "https://github.com/Borhs01/PROJECT-personal-site/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Borhs01/PROJECT-personal-site.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-     "beauty:sass": "sass sass/main.scss css/style.css -w"
+    "beauty:sass": "sass sass/main.scss css/style.css -w"
   },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "nodemon": "^3.1.11",
+    "slugify": "^1.6.6"
+  }
 }

@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Meie+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
+    <title>Ahmad Auwal | Web Developer</title>
+</head>
+<body>
+    <section class="section__header">
+        <div class="header__logo">
+            <div class="header__logo--box">
+                <img class="header__logo--img" src="img/realtor-1.jpeg" alt="image of the developer">
+            </div>
+            <div class="header__logo--text">
+                <span class="header__logo--text1">Ahmad Auwal</span>
+                <span class="header__logo--text2">Full Stack Web Developer</span>
+            </div>
+        </div>
+        <div class="header__navigation">
+            <ul class="header__nav__list">
+                <li class="header__nav__item"><a href="/overview" class="header__nav__link">Home</a></li>
+                <li class="header__nav__item"><a href="/project" class="header__nav__link">Projects</a></li>
+                <li class="header__nav__item"><a href="#" class="header__nav__link">Resume</a></li>
+                <li class="header__nav__item"><a href="#" class="header__nav__link">Blog</a></li>
+            </ul>
+        </div>
+        <div class="header__btn">
+            <a href="#" class="header__btn__link">Hire Me</a>
+        </div>
+    </section>
+    <section class="section__grid u-project">
+        <div class="projects__header">
+            <div class="projects__title">
+                <h2 class="projects__heading">Selected Projects</h2>
+                <p class="projects__subtitle">A curated collection of web apps and components showcasing frontend, backend, and full‑stack work.</p>
+            </div>
+            <div class="projects__controls">
+                <nav class="projects__filters" aria-label="Project filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                </nav>
+            </div>
+        </div>
+        {%PROJECT_CARDS%}
+    </section>
+    <section class="section__footer">
+        <div class="footer__top">
+            <a href="/project" class="footer__btn">
+                Explore More Projects
+            </a>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__bottom__name">
+                <span class="footer__bottom__name--text">
+                    Designed and Developed by <a href="#" class="Ahmad">Ahmad Auwal Abubakar</a>
+                </span>
+            </div>
+            <div class="footer__navigation">
+                <ul class="footer__nav__list">
+                    <li class="footer__nav__item"><a href="#" class="footer__nav__link">Email</a></li>
+                    <li class="footer__nav__item"><a href="#" class="footer__nav__link">LinkedIn</a></li>
+                    <li class="footer__nav__item"><a href="#" class="footer__nav__link">GitHub</a></li>
+                    <li class="footer__nav__item"><a href="#" class="footer__nav__link">Instagram</a></li>
+                    <li class="footer__nav__item"><a href="#" class="footer__nav__link">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

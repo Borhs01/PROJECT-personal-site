@@ -24,8 +24,8 @@
         </div>
         <div class="header__navigation">
             <ul class="header__nav__list">
-                <li class="header__nav__item"><a href="#" class="header__nav__link">Home</a></li>
-                <li class="header__nav__item"><a href="#" class="header__nav__link">Projects</a></li>
+                <li class="header__nav__item"><a href="/overview" class="header__nav__link">Home</a></li>
+                <li class="header__nav__item"><a href="/project" class="header__nav__link">Projects</a></li>
                 <li class="header__nav__item"><a href="#" class="header__nav__link">Resume</a></li>
                 <li class="header__nav__item"><a href="#" class="header__nav__link">Blog</a></li>
             </ul>
@@ -93,83 +93,12 @@
         </div>
     </section>
     <section class="section__grid">
-        <div class="grid__first">
-            <div class="grid__image">
-                <img src="img/house-1.jpeg" alt="project" class="grid__img">
-            </div>
-            <div class="grid__text__btn">
-                <a class="grid__text__btn1">View Project</a>
-            </div>
-            <div class="grid__text__bottom">
-                <span class="grid__text__top1">Portfolio Site</span>
-                <span class="grid__text__top2">Modern, responsive personal brand site</span>
-            </div>
-        </div>
-        <div class="grid__second">
-            <div class="grid__image">
-                <img src="img/house-2.jpeg" alt="project" class="grid__img">
-            </div>
-            <div class="grid__text__btn">
-                <a class="grid__text__btn1">View Project</a>
-            </div>
-            <div class="grid__text__bottom">
-                <span class="grid__text__top1">Startup Platform</span>
-                <span class="grid__text__top2">Full-stack dashboard and admin panel</span>
-            </div>
-        </div>
-        <div class="grid__first">
-            <div class="grid__image">
-                <img src="img/house-3.jpeg" alt="project" class="grid__img">
-            </div>
-            <div class="grid__text__btn">
-                <a class="grid__text__btn1">View Project</a>
-            </div>
-            <div class="grid__text__bottom">
-                <span class="grid__text__top1">E-Commerce</span>
-                <span class="grid__text__top2">Built with React and Firebase for scale</span>
-            </div>
-        </div>
-        <div class="grid__second">
-            <div class="grid__image">
-                <img src="img/house-4.jpeg" alt="project" class="grid__img">
-            </div>
-            <div class="grid__text__btn">
-                <a class="grid__text__btn1">View Project</a>
-            </div>
-            <div class="grid__text__bottom">
-                <span class="grid__text__top1">SaaS Platform</span>
-                <span class="grid__text__top2">Custom tools for client onboarding</span>
-            </div>
-        </div>
-        <div class="grid__first">
-            <div class="grid__image">
-                <img src="img/house-5.jpeg" alt="project" class="grid__img">
-            </div>
-            <div class="grid__text__btn">
-                <a class="grid__text__btn1">View Project</a>
-            </div>
-            <div class="grid__text__bottom">
-                <span class="grid__text__top1">Dev Portfolio Template</span>
-                <span class="grid__text__top2">Clean design for fast customization</span>
-            </div>
-        </div>
-        <div class="grid__second">
-            <div class="grid__image">
-                <img src="img/house-6.jpeg" alt="project" class="grid__img">
-            </div>
-            <div class="grid__text__btn">
-                <a class="grid__text__btn1">View Project</a>
-            </div>
-            <div class="grid__text__bottom">
-                <span class="grid__text__top1">Instagram Toolkit</span>
-                <span class="grid__text__top2">Redesigned gradient UX to boost brand recognition</span>
-            </div>
-        </div>
+        {%PROJECT_CARDS%}
     </section>
     <section class="section__footer">
         <div class="footer__top">
-            <a href="#" class="footer__btn">
-                Explore More Projects
+            <a href="/project" class="footer__btn">
+                Explore More Projects on the Project Page
             </a>
         </div>
         <div class="footer__bottom">
