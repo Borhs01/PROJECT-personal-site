@@ -1,12 +1,12 @@
-<div class="grid__item">
+<article class="grid__item" data-category="{%CATEGORY%}">
     <div class="grid__image">
-        <img src="{%IMAGE_HEAD%}" alt="project" class="grid__img">
+        <img src="{%IMAGE_HEAD%}" alt="Preview of {%TITLE%}" class="grid__img" loading="lazy">
     </div>
     <div class="grid__text__btn">
-        <a class="grid__text__btn1">{%TEXT%}</a>
+        <a class="grid__text__btn1" href="{%URL%}" data-project-url="{%URL%}" data-project-title="{%TITLE%}" aria-label="{%TEXT%}: {%TITLE%}">{%TEXT%}</a>
     </div>
     <div class="grid__text__bottom">
         <span class="grid__text__top1">{%TITLE%}</span>
         <span class="grid__text__top2">{%DESCRIPTION%}</span>
     </div>
-</div>
+</article>

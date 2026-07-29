@@ -18,7 +18,7 @@ html{
 }
 body{
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--font-primary);
     font-weight: 400;
     font-style: normal;
 }

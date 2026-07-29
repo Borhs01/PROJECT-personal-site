@@ -1,44 +1,29 @@
 [
   {
     "id": 1,
-    "image_head":"img/house-1.jpeg",
-    "text": "View Project",
-    "title": "Portfolio Site",
-    "description": "Modern, responsive personal brand site"
-    },
-    {
+    "image_head": "img/borhs-vtu-homepage.png",
+    "text": "Visit Live App ↗",
+    "title": "BORHS VTU App",
+    "description": "Buy data, airtime and pay utility bills",
+    "category": "fullstack",
+    "url": "https://www.borhs.com.ng/"
+  },
+  {
     "id": 2,
-    "image_head":"img/house-2.jpeg",
-    "text": "View Project",
-    "title": "E-commerce Platform",
-    "description": "Full-stack shopping application"
-    },
-    {
+    "image_head": "img/visiteno-homepage.png",
+    "text": "Visit Live Site ↗",
+    "title": "Education Naija & Overseas",
+    "description": "School search, comparison and study abroad platform",
+    "category": "fullstack",
+    "url": "https://visiteno.com/"
+  },
+  {
     "id": 3,
-    "image_head":"img/house-3.jpeg",
-    "text": "View Project",
-    "title": "Task Manager",
-    "description": "Productivity app with real-time sync"
-    },
-    {
-    "id": 4,
-    "image_head":"img/house-4.jpeg",
-    "text": "View Project",
-    "title": "Weather App",
-    "description": "Real-time weather forecast service"
-    },
-    {
-    "id": 5,
-    "image_head":"img/house-5.jpeg",
-    "text": "View Project",
-    "title": "Social Network",
-    "description": "Community platform with messaging"
-    },
-    {
-    "id": 6,
-    "image_head":"img/house-6.jpeg",
-    "text": "View Project",
-    "title": "Blog Engine",
-    "description": "Content management system"
-    }
+    "image_head": "img/personal-portfolio-homepage.png",
+    "text": "Visit Live Site ↗",
+    "title": "Personal Portfolio Website",
+    "description": "Responsive developer portfolio and project showcase",
+    "category": "frontend",
+    "url": "https://borhs01.github.io/PROJECT-personal-site/"
+  }
 ]
