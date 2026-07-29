@@ -1,9 +1,12 @@
 (() => {
   const path = location.pathname.replace(/\/$/, '') || '/';
+  const currentFile = path.split('/').pop() || 'index.html';
   document.querySelectorAll('.header__nav__link').forEach((link) => {
     const href = link.getAttribute('href').replace(/\/$/, '') || '/';
-    const sectionMatch = href === '/blog' && path.startsWith('/blog/');
-    const active = href === path || sectionMatch || (href === '/overview' && (path === '/' || path === '/overview'));
+    const linkFile = href.split('/').pop();
+    const homeMatch = linkFile === 'index.html' && (currentFile === 'index.html' || currentFile === 'overview' || path === '/');
+    const blogMatch = linkFile === 'blog.html' && (currentFile === 'blog.html' || currentFile.startsWith('blog-'));
+    const active = homeMatch || blogMatch || linkFile === currentFile;
     link.classList.toggle('active', active);
     if (active) link.setAttribute('aria-current', 'page');
   });

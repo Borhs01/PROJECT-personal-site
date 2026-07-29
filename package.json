@@ -17,6 +17,7 @@
   "scripts": {
     "start": "node index.js",
     "build:css": "sass sass/main.scss css/style.css --style=compressed",
+    "build:static": "node build-static.js",
     "beauty:sass": "sass sass/main.scss css/style.css -w"
   },
   "dependencies": {

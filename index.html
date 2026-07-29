@@ -11,28 +11,23 @@
     <title>Ahmad Auwal | Web Developer</title>
 </head>
 <body>
-    <section class="section__header">
-        <a class="header__logo" href="/overview">
-            <div class="header__logo--box">
-                <img class="header__logo--img" src="img/ahmad-auwal-passport.jpeg" alt="Ahmad Auwal Abubakar">
-            </div>
-            <div class="header__logo--text">
-                <span class="header__logo--text1">Ahmad Auwal</span>
-                <span class="header__logo--text2">Full-Stack Web Developer</span>
-            </div>
-        </a>
-        <div class="header__navigation">
-            <ul class="header__nav__list">
-                <li class="header__nav__item"><a href="/overview" class="header__nav__link">Home</a></li>
-                <li class="header__nav__item"><a href="/project" class="header__nav__link">Projects</a></li>
-                <li class="header__nav__item"><a href="/resume" class="header__nav__link">Resume</a></li>
-                <li class="header__nav__item"><a href="/blog" class="header__nav__link">Blog</a></li>
-            </ul>
-        </div>
-        <div class="header__btn">
-            <a href="mailto:ahmadauwal077@gmail.com" class="header__btn__link">Hire Me</a>
-        </div>
-    </section>
+    <header class="section__header">
+    <a class="header__logo" href="./index.html">
+        <span class="header__logo--box"><img class="header__logo--img" src="./img/ahmad-auwal-passport.jpeg" alt="Ahmad Auwal Abubakar"></span>
+        <span class="header__logo--text"><span class="header__logo--text1">Ahmad Auwal</span><span class="header__logo--text2">Full-Stack Web Developer</span></span>
+    </a>
+    <nav class="header__navigation" aria-label="Primary navigation">
+        <ul class="header__nav__list">
+            <li class="header__nav__item"><a href="./index.html" class="header__nav__link">Home</a></li>
+            <li class="header__nav__item"><a href="./project.html" class="header__nav__link">Projects</a></li>
+            <li class="header__nav__item"><a href="./resume.html" class="header__nav__link">Resume</a></li>
+            <li class="header__nav__item"><a href="./blog.html" class="header__nav__link">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="header__btn"><a href="mailto:ahmadauwal077@gmail.com" class="header__btn__link">Hire Me</a></div>
+</header>
+
+
     <section class="section__build">
         <div class="build__heading">
             <h1 class="build__heading__text">
@@ -92,7 +87,43 @@
         </div>
     </section>
     <section class="section__grid">
-        {%PROJECT_CARDS%}
+        <!-- PROJECT_CARDS_START --><article class="grid__item" data-category="fullstack">
+    <div class="grid__image">
+        <img src="img/borhs-vtu-homepage.png" alt="Preview of BORHS VTU App" class="grid__img" loading="lazy">
+    </div>
+    <div class="grid__text__btn">
+        <a class="grid__text__btn1" href="https://www.borhs.com.ng/" data-project-url="https://www.borhs.com.ng/" data-project-title="BORHS VTU App" aria-label="Visit Live App ↗: BORHS VTU App">Visit Live App ↗</a>
+    </div>
+    <div class="grid__text__bottom">
+        <span class="grid__text__top1">BORHS VTU App</span>
+        <span class="grid__text__top2">Buy data, airtime and pay utility bills</span>
+    </div>
+</article>
+<article class="grid__item" data-category="fullstack">
+    <div class="grid__image">
+        <img src="img/visiteno-homepage.png" alt="Preview of Education Naija & Overseas" class="grid__img" loading="lazy">
+    </div>
+    <div class="grid__text__btn">
+        <a class="grid__text__btn1" href="https://visiteno.com/" data-project-url="https://visiteno.com/" data-project-title="Education Naija & Overseas" aria-label="Visit Live Site ↗: Education Naija & Overseas">Visit Live Site ↗</a>
+    </div>
+    <div class="grid__text__bottom">
+        <span class="grid__text__top1">Education Naija & Overseas</span>
+        <span class="grid__text__top2">School search, comparison and study abroad platform</span>
+    </div>
+</article>
+<article class="grid__item" data-category="frontend">
+    <div class="grid__image">
+        <img src="img/personal-portfolio-homepage.png" alt="Preview of Personal Portfolio Website" class="grid__img" loading="lazy">
+    </div>
+    <div class="grid__text__btn">
+        <a class="grid__text__btn1" href="https://borhs01.github.io/PROJECT-personal-site/" data-project-url="https://borhs01.github.io/PROJECT-personal-site/" data-project-title="Personal Portfolio Website" aria-label="Visit Live Site ↗: Personal Portfolio Website">Visit Live Site ↗</a>
+    </div>
+    <div class="grid__text__bottom">
+        <span class="grid__text__top1">Personal Portfolio Website</span>
+        <span class="grid__text__top2">Responsive developer portfolio and project showcase</span>
+    </div>
+</article>
+<!-- PROJECT_CARDS_END -->
     </section>
     <section class="section__footer">
         <div class="footer__top">
@@ -111,6 +142,6 @@
             </div>
         </div>
     </section>
-    <script src="/app.js" defer></script>
+    <script src="./app.js" defer></script>
 </body>
 </html>

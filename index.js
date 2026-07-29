@@ -39,10 +39,10 @@ const replaceTemplate = (temp, product) => {
 const templateOverview = fs.readFileSync(`${__dirname}/index.html`, 'utf-8');
 const templateStyle = fs.readFileSync(`${__dirname}/css/style.css`, 'utf-8');
 const templateProject = fs.readFileSync(`${__dirname}/project.html`, 'utf-8');
-const templateCard = fs.readFileSync(`${__dirname}/project_card.html`, 'utf-8');
+const templateCard = fs.readFileSync(`${__dirname}/project-card.template`, 'utf-8');
 const templateResume = fs.readFileSync(`${__dirname}/resume.html`, 'utf-8');
 const templateBlog = fs.readFileSync(`${__dirname}/blog.html`, 'utf-8');
-const templateArticle = fs.readFileSync(`${__dirname}/article.html`, 'utf-8');
+const templateArticle = fs.readFileSync(`${__dirname}/article.template`, 'utf-8');
 const sharedNavigation = fs.readFileSync(`${__dirname}/shared-navigation.html`, 'utf-8');
 const clientScript = fs.readFileSync(`${__dirname}/app.js`, 'utf-8');
 
@@ -161,7 +161,7 @@ const server = http.createServer((req, res) => {
     }
     
     // Overview Page
-    if (pathName === '/' || pathName === '/overview') {
+    if (pathName === '/' || pathName === '/overview' || pathName === '/index.html') {
         res.writeHead(200, {'content-type': 'text/html'});
         // Show up to 6 items on the overview. Items that have an `overview` flag
         // use that; otherwise default the first 6 items in the data to overview.
@@ -171,14 +171,17 @@ const server = http.createServer((req, res) => {
         }).slice(0, 6);
 
         const cardsHtml = overviewItems.map(el => replaceTemplate(templateCard, el)).join('');
-        const templateOverviewFinal = templateOverview.replace('{%PROJECT_CARDS%}', cardsHtml);
+        const templateOverviewFinal = templateOverview.replace(
+            /<!-- PROJECT_CARDS_START -->[\s\S]*?<!-- PROJECT_CARDS_END -->/,
+            `<!-- PROJECT_CARDS_START -->${cardsHtml}<!-- PROJECT_CARDS_END -->`
+        );
         res.end(withSharedNavigation(templateOverviewFinal));
 
     // Resume and writing
-    } else if (pathName === '/resume') {
+    } else if (pathName === '/resume' || pathName === '/resume.html') {
         res.writeHead(200, {'content-type': 'text/html; charset=utf-8'});
         res.end(withSharedNavigation(templateResume));
-    } else if (pathName === '/blog') {
+    } else if (pathName === '/blog' || pathName === '/blog.html') {
         res.writeHead(200, {'content-type': 'text/html; charset=utf-8'});
         res.end(withSharedNavigation(templateBlog));
     } else if (pathName.startsWith('/blog/')) {
@@ -201,10 +204,26 @@ const server = http.createServer((req, res) => {
         res.end(articleHtml);
 
     // Project Page
-    } else if (pathName === '/project') {
+    } else if (pathName === '/project' || pathName === '/project.html') {
         res.writeHead(200, {'content-type': 'text/html'});
         const cardsHtml = dataObj.map(el => replaceTemplate(templateCard, el)).join('');
-        res.end(withSharedNavigation(templateProject.replace('{%PROJECT_CARDS%}', cardsHtml)));
+        const projectOutput = templateProject.replace(
+            /<!-- PROJECT_CARDS_START -->[\s\S]*?<!-- PROJECT_CARDS_END -->/,
+            `<!-- PROJECT_CARDS_START -->${cardsHtml}<!-- PROJECT_CARDS_END -->`
+        );
+        res.end(withSharedNavigation(projectOutput));
+
+    // Static article files used by GitHub Pages
+    } else if (/^\/blog-[a-z0-9-]+\.html$/.test(pathName)) {
+        const filePath = path.join(__dirname, pathName);
+        fs.readFile(filePath, 'utf8', (err, html) => {
+            if (err) {
+                res.writeHead(404, {'content-type': 'text/html; charset=utf-8'});
+                return res.end('<h1>Article not found</h1>');
+            }
+            res.writeHead(200, {'content-type': 'text/html; charset=utf-8'});
+            res.end(html);
+        });
 
     // API Page
     } else if (pathName === '/api') {
@@ -219,6 +238,10 @@ const server = http.createServer((req, res) => {
         res.end('<h1>Page not found</h1>')
     }
 })
-server.listen(8080, '127.0.0.1', () => {
-    console.log('Listening to request on port 8080');
-});
+if (require.main === module) {
+    server.listen(8080, '127.0.0.1', () => {
+        console.log('Listening to request on port 8080');
+    });
+}
+
+module.exports = { articles };

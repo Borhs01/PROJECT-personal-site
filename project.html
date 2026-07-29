@@ -2,26 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Meie+Script&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="/img/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon-32x32.png">
     <title>Projects — Ahmad Auwal</title>
 </head>
 <body>
     <header class="section__header">
-        <a class="header__logo" href="/overview"><span class="header__logo--box"><img class="header__logo--img" src="/img/ahmad-auwal-passport.jpeg" alt="Ahmad Auwal Abubakar"></span><span class="header__logo--text"><span class="header__logo--text1">Ahmad Auwal</span><span class="header__logo--text2">Frontend Web Developer</span></span></a>
-        <nav class="header__navigation" aria-label="Primary"><ul class="header__nav__list"><li class="header__nav__item"><a href="/overview" class="header__nav__link">Home</a></li><li class="header__nav__item"><a href="/project" class="header__nav__link">Projects</a></li><li class="header__nav__item"><a href="/resume" class="header__nav__link">Resume</a></li><li class="header__nav__item"><a href="/blog" class="header__nav__link">Blog</a></li></ul></nav>
-        <div class="header__btn"><a href="mailto:ahmadauwal077@gmail.com" class="header__btn__link">Hire Me</a></div>
-    </header>
+    <a class="header__logo" href="./index.html">
+        <span class="header__logo--box"><img class="header__logo--img" src="./img/ahmad-auwal-passport.jpeg" alt="Ahmad Auwal Abubakar"></span>
+        <span class="header__logo--text"><span class="header__logo--text1">Ahmad Auwal</span><span class="header__logo--text2">Full-Stack Web Developer</span></span>
+    </a>
+    <nav class="header__navigation" aria-label="Primary navigation">
+        <ul class="header__nav__list">
+            <li class="header__nav__item"><a href="./index.html" class="header__nav__link">Home</a></li>
+            <li class="header__nav__item"><a href="./project.html" class="header__nav__link">Projects</a></li>
+            <li class="header__nav__item"><a href="./resume.html" class="header__nav__link">Resume</a></li>
+            <li class="header__nav__item"><a href="./blog.html" class="header__nav__link">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="header__btn"><a href="mailto:ahmadauwal077@gmail.com" class="header__btn__link">Hire Me</a></div>
+</header>
+
+
     <main>
         <section class="page-hero page-hero--projects"><p class="eyebrow">Selected work · 2024—2026</p><h1>Ideas, shaped into<br><em>useful products.</em></h1><p class="page-hero__intro">I design and build considered digital experiences—from the first sketch to a reliable production release.</p></section>
         <section class="section__grid u-project">
             <div class="projects__header"><div><h2 class="projects__heading">Project archive</h2><p class="projects__subtitle">A collection of real, deployed web products.</p></div><nav class="projects__filters" aria-label="Project filters"><button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="frontend">Frontend</button><button class="filter-btn" data-filter="fullstack">Full Stack</button></nav></div>
-            {%PROJECT_CARDS%}
+            <!-- PROJECT_CARDS_START --><article class="grid__item" data-category="fullstack">
+    <div class="grid__image">
+        <img src="img/borhs-vtu-homepage.png" alt="Preview of BORHS VTU App" class="grid__img" loading="lazy">
+    </div>
+    <div class="grid__text__btn">
+        <a class="grid__text__btn1" href="https://www.borhs.com.ng/" data-project-url="https://www.borhs.com.ng/" data-project-title="BORHS VTU App" aria-label="Visit Live App ↗: BORHS VTU App">Visit Live App ↗</a>
+    </div>
+    <div class="grid__text__bottom">
+        <span class="grid__text__top1">BORHS VTU App</span>
+        <span class="grid__text__top2">Buy data, airtime and pay utility bills</span>
+    </div>
+</article>
+<article class="grid__item" data-category="fullstack">
+    <div class="grid__image">
+        <img src="img/visiteno-homepage.png" alt="Preview of Education Naija & Overseas" class="grid__img" loading="lazy">
+    </div>
+    <div class="grid__text__btn">
+        <a class="grid__text__btn1" href="https://visiteno.com/" data-project-url="https://visiteno.com/" data-project-title="Education Naija & Overseas" aria-label="Visit Live Site ↗: Education Naija & Overseas">Visit Live Site ↗</a>
+    </div>
+    <div class="grid__text__bottom">
+        <span class="grid__text__top1">Education Naija & Overseas</span>
+        <span class="grid__text__top2">School search, comparison and study abroad platform</span>
+    </div>
+</article>
+<article class="grid__item" data-category="frontend">
+    <div class="grid__image">
+        <img src="img/personal-portfolio-homepage.png" alt="Preview of Personal Portfolio Website" class="grid__img" loading="lazy">
+    </div>
+    <div class="grid__text__btn">
+        <a class="grid__text__btn1" href="https://borhs01.github.io/PROJECT-personal-site/" data-project-url="https://borhs01.github.io/PROJECT-personal-site/" data-project-title="Personal Portfolio Website" aria-label="Visit Live Site ↗: Personal Portfolio Website">Visit Live Site ↗</a>
+    </div>
+    <div class="grid__text__bottom">
+        <span class="grid__text__top1">Personal Portfolio Website</span>
+        <span class="grid__text__top2">Responsive developer portfolio and project showcase</span>
+    </div>
+</article>
+<!-- PROJECT_CARDS_END -->
         </section>
     </main>
     <footer class="section__footer"><div class="footer__top"><p>Have a project in mind?</p><h2>Let’s work together.</h2><a href="mailto:ahmadauwal077@gmail.com" class="footer__btn">Get in touch <span>↗</span></a></div><div class="footer__bottom"><span class="footer__bottom__name--text">© <span data-year></span> Ahmad Auwal Abubakar</span><nav class="footer__navigation"><a href="mailto:ahmadauwal077@gmail.com" class="footer__nav__link">Email</a><a href="https://www.linkedin.com/in/ahmad-auwal-42293b286/" class="footer__nav__link">LinkedIn</a><a href="https://github.com/Borhs01" class="footer__nav__link">GitHub</a></nav></div></footer>
-    <script src="/app.js" defer></script>
+    <script src="./app.js" defer></script>
 </body>
 </html>

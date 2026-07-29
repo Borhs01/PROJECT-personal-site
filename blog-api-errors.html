@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clear server responses lead to calmer debugging and more useful product experiences.">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Meie+Script&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>API errors are part of the user interface — Ahmad Auwal</title>
+</head>
+<body>
+<header class="section__header">
+    <a class="header__logo" href="./index.html">
+        <span class="header__logo--box"><img class="header__logo--img" src="./img/ahmad-auwal-passport.jpeg" alt="Ahmad Auwal Abubakar"></span>
+        <span class="header__logo--text"><span class="header__logo--text1">Ahmad Auwal</span><span class="header__logo--text2">Full-Stack Web Developer</span></span>
+    </a>
+    <nav class="header__navigation" aria-label="Primary navigation">
+        <ul class="header__nav__list">
+            <li class="header__nav__item"><a href="./index.html" class="header__nav__link">Home</a></li>
+            <li class="header__nav__item"><a href="./project.html" class="header__nav__link">Projects</a></li>
+            <li class="header__nav__item"><a href="./resume.html" class="header__nav__link">Resume</a></li>
+            <li class="header__nav__item"><a href="./blog.html" class="header__nav__link">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="header__btn"><a href="mailto:ahmadauwal077@gmail.com" class="header__btn__link">Hire Me</a></div>
+</header>
+
+
+<main>
+    <article class="article">
+        <a href="./blog.html" class="text-link">← Back to all notes</a>
+        <header class="article__header">
+            <div class="post-meta"><span>Backend</span><time>7 min read</time></div>
+            <h1>API errors are part of the user interface</h1>
+            <p>Clear server responses lead to calmer debugging and more useful product experiences.</p>
+        </header>
+        <img class="article__cover" src="./img/gal-14.jpeg" alt="Developer working with application data">
+        <div class="article__body"><p class="article__lead">An API error may begin on the server, but its final audience is often a person trying to complete a task. The quality of that response shapes what the interface can explain and recover from.</p>
+        <h2>Return useful distinctions</h2><p>Validation problems, missing records, expired sessions, and unavailable services should not all look identical. Stable status codes and error identifiers help the client choose the right response.</p>
+        <h2>Write messages for the next reader</h2><p>Logs need technical context; users need clear language and a next step. Keep those responsibilities separate so internal details are not leaked and public messages remain understandable.</p>
+        <blockquote>A useful error answers two questions: what happened, and what can I do now?</blockquote>
+        <h2>Preserve recovery paths</h2><p>Where possible, keep form data, offer a retry, and return enough structured detail to highlight the exact field that needs attention. Failure should interrupt the task as little as possible.</p></div>
+    </article>
+</main>
+<footer class="section__footer"><div class="footer__top"><p>Have a project in mind?</p><h2>Let’s work together.</h2><a href="mailto:ahmadauwal077@gmail.com" class="footer__btn">Get in touch <span>↗</span></a></div><div class="footer__bottom"><span class="footer__bottom__name--text">© <span data-year></span> Ahmad Auwal Abubakar</span><nav class="footer__navigation"><a href="mailto:ahmadauwal077@gmail.com" class="footer__nav__link">Email</a><a href="https://www.linkedin.com/in/ahmad-auwal-42293b286/" class="footer__nav__link">LinkedIn</a><a href="https://github.com/Borhs01" class="footer__nav__link">GitHub</a></nav></div></footer>
+<script src="./app.js" defer></script>
+</body>
+</html>
